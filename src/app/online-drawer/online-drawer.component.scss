@@ -1,0 +1,32 @@
+:host {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    .drawing-area {
+        flex: 0 1 auto;
+        flex-direction: column;
+        .row {
+            display: flex;
+        }
+        .pixel {
+            width: 1px;
+            height: 1px;
+        }
+    }
+    .colors {
+        flex: 1;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: column;
+        .color {
+            box-sizing: border-box;
+            width: 100%;
+            height: 33%;
+            border: 1px solid transparent;
+            opacity: .3;
+            &.selected {
+              opacity: 1;
+            }
+        }
+    }
+}

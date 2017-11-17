@@ -1,0 +1,8 @@
+<div class="drawing-area">
+  <div *ngFor="let row of rows" class="row">
+    <div *ngFor="let iPixel of row" class="pixel" [attr.data-x]="iPixel.x" [attr.data-y]="iPixel.y" [ngStyle]="{'background-color': iPixel.color ? iPixel.color : 'white'}" (mouseover)="mouseover(iPixel)"></div>
+  </div>
+</div>
+<div class="colors">
+  <div [ngClass]="{selected: color === selectedColor}" (click)="selectedColor = color" *ngFor="let color of environment.colors" class="color" [ngStyle]="{'background-color': color ? color : 'white'}"></div>
+</div>
